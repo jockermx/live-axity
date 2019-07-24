@@ -1,5 +1,7 @@
 {
   "name": "live-axity",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
