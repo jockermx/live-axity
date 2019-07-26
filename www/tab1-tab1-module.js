@@ -1,5 +1,47 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["tab1-tab1-module"],{
 
+/***/ "./src/app/services/data.service.ts":
+/*!******************************************!*\
+  !*** ./src/app/services/data.service.ts ***!
+  \******************************************/
+/*! exports provided: DataService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DataService", function() { return DataService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../environments/environment */ "./src/environments/environment.ts");
+
+
+
+
+var httpOptions = {
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({ 'Content-Type': 'application/json' })
+};
+var DataService = /** @class */ (function () {
+    function DataService(http) {
+        this.http = http;
+        this.urlBase = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].urlBase;
+    }
+    DataService.prototype.getUsers = function () {
+        return this.http.get(this.urlBase + _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].users);
+    };
+    DataService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    ], DataService);
+    return DataService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/tab1/tab1.module.ts":
 /*!*************************************!*\
   !*** ./src/app/tab1/tab1.module.ts ***!
@@ -52,7 +94,7 @@ var Tab1PageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Tab One\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <ion-card class=\"welcome-card\">\n      <img src=\"/assets/shapes.svg\" alt=\"\" />\n      <ion-card-header>\n        <ion-card-subtitle>Get Started</ion-card-subtitle>\n        <ion-card-title>Welcome to Ionic</ion-card-title>\n      </ion-card-header>\n      <ion-card-content>\n        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>\n      </ion-card-content>\n    </ion-card>\n    <ion-list lines=\"none\">\n      <ion-list-header>\n        <ion-label>Resources</ion-label>\n      </ion-list-header>\n      <ion-item href=\"https://ionicframework.com/docs/\">\n        <ion-icon slot=\"start\" color=\"medium\" name=\"book\"></ion-icon>\n        <ion-label>Ionic Documentation</ion-label>\n      </ion-item>\n      <ion-item href=\"https://ionicframework.com/docs/building/scaffolding\">\n        <ion-icon slot=\"start\" color=\"medium\" name=\"build\"></ion-icon>\n        <ion-label>Scaffold Out Your App</ion-label>\n      </ion-item>\n      <ion-item href=\"https://ionicframework.com/docs/layout/structure\">\n        <ion-icon slot=\"start\" color=\"medium\" name=\"grid\"></ion-icon>\n        <ion-label>Change Your App Layout</ion-label>\n      </ion-item>\n      <ion-item href=\"https://ionicframework.com/docs/theming/basics\">\n        <ion-icon slot=\"start\" color=\"medium\" name=\"color-fill\"></ion-icon>\n        <ion-label>Theme Your App</ion-label>\n      </ion-item>\n    </ion-list>\n</ion-content>\n"
+module.exports = "<ion-header>\n  <ion-toolbar class=\"axHeaderBackground\">\n    <ion-title align-title color=\"light\">LIVE AXITY</ion-title>\n    <ion-buttons slot=\"secondary\">\n      <ion-button color=\"light\">\n        <ion-icon slot=\"icon-only\" name=\"more\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n  </ion-toolbar>\n  <!--h1 class=\"title\">\n    <img class=\"title-image\" src=\"../../assets/imgs/logo_live.png\" width=\"123\" height=\"43\" />\n  </h1>\n  <div class=\"buttons\">\n    <button class=\"button\">Right Button</button>\n  </div-->\n</ion-header>\n\n<ion-content class=\"axContentBackground\">\n  <!--ion-list lines=\"none\">\n    <ion-list-header>\n      <ion-label>Usuarios</ion-label>\n    </ion-list-header>\n    <div *ngFor=\"let user of userList\">\n      <p>{{user.firstName}}</p>\n    </div>\n  </ion-list-->\n  <ion-item>\n      <ion-thumbnail slot=\"start\">\n        <ion-img [src]=\"../../assets/icon/menu_bot.png\"></ion-img>\n      </ion-thumbnail>\n      <ion-label>\n        Icon End\n      </ion-label>\n    </ion-item>\n    \n    <ion-item>\n      <ion-label>\n        Large Icon End\n      </ion-label>\n      <ion-icon name=\"information-circle\" size=\"large\" slot=\"end\"></ion-icon>\n    </ion-item>\n</ion-content>\n"
 
 /***/ }),
 
@@ -63,7 +105,7 @@ module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Tab One\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".welcome-card img {\n  max-height: 35vh;\n  overflow: hidden; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hZG1pbi9Eb2N1bWVudHMvUHJvamVjdHMvbGl2ZS1heGl0eS9zcmMvYXBwL3RhYjEvdGFiMS5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxnQkFBZ0I7RUFDaEIsZ0JBQWdCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC90YWIxL3RhYjEucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLndlbGNvbWUtY2FyZCBpbWcge1xuICBtYXgtaGVpZ2h0OiAzNXZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xufVxuIl19 */"
+module.exports = ".welcome-card img {\n  max-height: 35vh;\n  overflow: hidden; }\n\n.axContentBackground {\n  --background: #fff url(\"/assets/img/back_live.png\") 0 0/100% 100%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hZG1pbi9Eb2N1bWVudHMvUHJvamVjdHMvbGl2ZS1heGl0eS9zcmMvYXBwL3RhYjEvdGFiMS5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxnQkFBZ0I7RUFDaEIsZ0JBQWdCLEVBQUE7O0FBR2xCO0VBQ0UsaUVBQWEsRUFBQSIsImZpbGUiOiJzcmMvYXBwL3RhYjEvdGFiMS5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIud2VsY29tZS1jYXJkIGltZyB7XG4gIG1heC1oZWlnaHQ6IDM1dmg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG59XG5cbi5heENvbnRlbnRCYWNrZ3JvdW5kIHtcbiAgLS1iYWNrZ3JvdW5kOiAjZmZmIHVybChcIi9hc3NldHMvaW1nL2JhY2tfbGl2ZS5wbmdcIikgMCAwLzEwMCUgMTAwJTtcbn0iXX0= */"
 
 /***/ }),
 
@@ -79,18 +121,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Tab1Page", function() { return Tab1Page; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/data.service */ "./src/app/services/data.service.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+
+
 
 
 var Tab1Page = /** @class */ (function () {
-    function Tab1Page() {
+    function Tab1Page(_dataService) {
+        this._dataService = _dataService;
+        this.subscription = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subscription"]();
     }
+    Tab1Page.prototype.ngOnInit = function () {
+        this.getCustomers();
+    };
+    // ejemplo de funcion
+    Tab1Page.prototype.getCustomers = function () {
+        var _this = this;
+        return this.subscription.add(this._dataService.getUsers().subscribe(function (users) {
+            console.log(users);
+            _this.userList = users;
+        }));
+    };
+    Tab1Page.prototype.ionViewDidLeave = function () {
+        // se elimina subscription
+        this.subscription.unsubscribe();
+    };
     Tab1Page = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-tab1',
             template: __webpack_require__(/*! ./tab1.page.html */ "./src/app/tab1/tab1.page.html"),
             styles: [__webpack_require__(/*! ./tab1.page.scss */ "./src/app/tab1/tab1.page.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"]])
     ], Tab1Page);
     return Tab1Page;
 }());

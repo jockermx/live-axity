@@ -1,41 +1,59 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab One
+  <ion-toolbar class="axHeaderBackground">
+    <ion-title align-title color="light" text-center>
+      <img src="../../assets/img/logo_live.png" class="axTitle"/>
     </ion-title>
+    <ion-buttons slot="secondary">
+      <ion-button color="light">
+        <ion-icon slot="icon-only" name="more"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
+  <!--h1 class="title">
+    <img class="title-image" src="../../assets/imgs/logo_live.png" width="123" height="43" />
+  </h1>
+  <div class="buttons">
+    <button class="button">Right Button</button>
+  </div-->
 </ion-header>
 
 <ion-content>
-    <ion-card class="welcome-card">
-      <img src="/assets/shapes.svg" alt="" />
-      <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
-      </ion-card-content>
-    </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>Resources</ion-label>
-      </ion-list-header>
-      <ion-item href="https://ionicframework.com/docs/">
-        <ion-icon slot="start" color="medium" name="book"></ion-icon>
-        <ion-label>Ionic Documentation</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-        <ion-icon slot="start" color="medium" name="build"></ion-icon>
-        <ion-label>Scaffold Out Your App</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/layout/structure">
-        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-        <ion-label>Change Your App Layout</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/theming/basics">
-        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-        <ion-label>Theme Your App</ion-label>
-      </ion-item>
-    </ion-list>
+  <!--ion-list lines="none">
+    <ion-list-header>
+      <ion-label>Usuarios</ion-label>
+    </ion-list-header>
+    <div *ngFor="let user of userList">
+      <p>{{user.firstName}}</p>
+    </div>
+  </ion-list-->
+  <div>
+    <ion-row>
+      <ion-col col="12" size="6" offset="3" >
+        <div class="axMenuIconList">
+          <div class="axMenuIcon">
+            <img src="../../assets/icon/menu_bot.png"/>
+            <div>Bot</div>
+            <div class="axColorLine"></div>
+          </div>
+          <div class="axMenuIcon">
+            <img src="../../assets/icon/menu_ruta.png"/>
+            <div>Ruta virtual</div>
+            <div class="axColorLine"></div>
+          </div>
+          <div class="axMenuIcon">
+            <img src="../../assets/icon/menu_localiza.png"/>
+            <div>Localiza</div>
+            <div class="axColorLine"></div>
+          </div>
+          <div class="axMenuIcon">
+            <img src="../../assets/icon/menu_aumentada.png"/>
+            <div>Realidad aumentada</div>
+            <div class="axColorLine"></div>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+  
+  
 </ion-content>

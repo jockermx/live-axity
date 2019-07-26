@@ -9,3 +9,14 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+.axHeaderBackground {
+    --background: rgba(188,41,183,1);
+    --background: -moz-linear-gradient(left, rgba(188,41,183,1) 0%, rgba(181,46,183,0.96) 11%, rgba(128,95,179,0.93) 19%, rgba(97,126,176,0.87) 36%, rgba(85,138,176,0.83) 50%, rgba(66,160,176,0.73) 78%, rgba(6,213,172,0.65) 100%);
+    --background: -webkit-gradient(left top, right top, color-stop(0%, rgba(188,41,183,1)), color-stop(11%, rgba(181,46,183,0.96)), color-stop(19%, rgba(128,95,179,0.93)), color-stop(36%, rgba(97,126,176,0.87)), color-stop(50%, rgba(85,138,176,0.83)), color-stop(78%, rgba(66,160,176,0.73)), color-stop(100%, rgba(6,213,172,0.65)));
+    --background: -webkit-linear-gradient(left, rgba(188,41,183,1) 0%, rgba(181,46,183,0.96) 11%, rgba(128,95,179,0.93) 19%, rgba(97,126,176,0.87) 36%, rgba(85,138,176,0.83) 50%, rgba(66,160,176,0.73) 78%, rgba(6,213,172,0.65) 100%);
+    --background: -o-linear-gradient(left, rgba(188,41,183,1) 0%, rgba(181,46,183,0.96) 11%, rgba(128,95,179,0.93) 19%, rgba(97,126,176,0.87) 36%, rgba(85,138,176,0.83) 50%, rgba(66,160,176,0.73) 78%, rgba(6,213,172,0.65) 100%);
+    --background: -ms-linear-gradient(left, rgba(188,41,183,1) 0%, rgba(181,46,183,0.96) 11%, rgba(128,95,179,0.93) 19%, rgba(97,126,176,0.87) 36%, rgba(85,138,176,0.83) 50%, rgba(66,160,176,0.73) 78%, rgba(6,213,172,0.65) 100%);
+    --background: linear-gradient(to right, rgba(188,41,183,1) 0%, rgba(181,46,183,0.96) 11%, rgba(128,95,179,0.93) 19%, rgba(97,126,176,0.87) 36%, rgba(85,138,176,0.83) 50%, rgba(66,160,176,0.73) 78%, rgba(6,213,172,0.65) 100%);
+    --filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bc29b7', endColorstr='#06d5ac', GradientType=1 );
+}

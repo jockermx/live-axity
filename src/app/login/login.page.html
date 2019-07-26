@@ -1,0 +1,55 @@
+<!--ion-header>
+  <ion-toolbar color="translucent">
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header-->
+        
+
+<ion-content class="axContentBackground">
+  <img src="../../assets/img/logo_axity.png" class="axAxityLogo"/>
+  <ion-row class="axContent">
+    <ion-col col="12" size="6" offset="3" >
+      <div class="axMenuIconList">
+        <ion-img [src]="axityLive"></ion-img>
+        <ion-img [src]="axityCreacionesDigitales"></ion-img>
+      </div>
+    </ion-col>
+    <ion-col>
+      <form  #form="ngForm" (ngSubmit)="register(form)">
+        <ion-grid>
+          <ion-row color="primary" justify-content-center>
+            <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+              <div padding>
+                <ion-item color="transparent" class="axInputForm">
+                  <ion-input name="name" type="text" placeholder="* Nombre" ngModel required></ion-input>
+                </ion-item>
+                <ion-item color="transparent" class="axInputForm">
+                  <ion-input name="lastname" type="text" placeholder="* Apellido" ngModel required></ion-input>
+                </ion-item>
+                <ion-item color="transparent" class="axInputForm">
+                  <ion-input name="job" type="job" placeholder="* Puesto" ngModel required></ion-input>
+                </ion-item>
+                <ion-item color="transparent" class="axInputForm">
+                  <ion-input name="company" type="text" placeholder="* Empresa" ngModel required></ion-input>
+                </ion-item>
+                <ion-item color="transparent" class="axInputForm">
+                  <ion-input name="telephone" type="telephone" placeholder="* Teléfono" ngModel required></ion-input>
+                </ion-item>
+                <ion-item color="transparent" class="axInputForm">
+                  <ion-input name="email" type="email" placeholder="* Correo" ngModel required></ion-input>
+                </ion-item>
+                <ion-item color="transparent" class="axInputForm">
+                  <ion-input name="nickname" type="text" placeholder="* Alias" ngModel required></ion-input>
+                </ion-item>
+              </div>
+              <div padding>
+                <!--ion-button size="large" type="submit" [disabled]="form.invalid" expand="block" class="axBtnForm" color="transparent">Vivir la experiencia</ion-button-->
+                <ion-button size="large" type="submit" expand="block" class="axBtnForm" color="transparent">Vivir la experiencia</ion-button>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </form>
+    </ion-col>
+  </ion-row>
+</ion-content>
